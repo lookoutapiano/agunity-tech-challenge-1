@@ -17,12 +17,6 @@ Clone the project
   git clone https://github.com/lookoutapiano/agunity-tech-challenge-1.git
 ```
 
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
 Install dependencies
 
 ```bash
