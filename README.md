@@ -35,3 +35,8 @@ Start the server
 ```bash
   http-server
 ```
+
+## How to Test Code
+- Enter a valid location (e.g., city name or coordinates) in the input field.
+- Click the button to trigger the API request.
+- Check if the weather information is displayed correctly.
