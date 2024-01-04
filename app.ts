@@ -4,8 +4,8 @@ async function getWeatherByCoordinates() {
     const longitudeInput = document.getElementById("longitudeInput") as HTMLInputElement;
     const weatherInfoElement = document.getElementById("weatherInfo");
 
-    const latitude = latitudeInput.value.trim(); //removes white space
-    const longitude = longitudeInput.value.trim(); //removes white space
+    const latitude = latitudeInput.value.trim();
+    const longitude = longitudeInput.value.trim();
 
     if (latitude === "" || longitude === "") {
         alert("Please enter both latitude and longitude");
@@ -20,10 +20,11 @@ async function getWeatherByCoordinates() {
             const data = await response.json();
 
             const { name, main, weather } = data;
-            const temperature = main.temp;
+            const { humidity, temp: temperature } = main;
+
             const description = weather[0].description;
             weatherInfoElement.classList.remove("danger");
-            weatherInfoElement.innerHTML = `<p>Location: ${name}</p><p>Temperature: ${temperature}°C</p><p>Description: ${description}</p>`;
+            weatherInfoElement.innerHTML = `<p>Location: ${name}</p><p>Temperature: ${temperature}°C</p><p>Humidity: ${humidity}°C</p><p>Description: ${description}</p>`;
         } catch (error) {
             console.error("Error fetching weather data:", error);
             weatherInfoElement.classList.add("danger");
