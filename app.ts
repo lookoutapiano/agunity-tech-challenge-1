@@ -1,5 +1,5 @@
 async function getWeatherByCoordinates() {
-    const apiKey = "88c9bc9fb353f01f3aeb6221add0a59e";
+    const apiKey = "API-KEY-HERE";
     const latitudeInput = document.getElementById("latitudeInput") as HTMLInputElement;
     const longitudeInput = document.getElementById("longitudeInput") as HTMLInputElement;
     const weatherInfoElement = document.getElementById("weatherInfo");
