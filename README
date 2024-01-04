@@ -14,7 +14,7 @@ Send us a link to a your github repo with the code.
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/lookoutapiano/agunity-tech-challenge-1.git
 ```
 
 Go to the project directory
